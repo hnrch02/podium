@@ -1,0 +1,13 @@
+<template name="home">
+
+  <div id="home" class="wrapper">
+    <ul id="timetable" class="multi-list four-cols">
+      {{#each this}}
+        <li class="timecard {{#if currentUser}}{{#if isSpeaking}}is-speaking{{/if}}{{/if}}" style="background: {{color}};">
+          <h1 class="time">{{parseTime}}</h1>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+
+</template>

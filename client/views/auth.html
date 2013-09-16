@@ -1,0 +1,36 @@
+<template name="auth">
+
+  <div id="auth" class="wrapper">
+    <div class="container">
+
+      <div id="auth-wrapper" class="col-md-4 col-md-offset-4">
+        <div class="podium">
+          <img class="podium-logo" src="/img/podium@2x.png" alt="Podium">
+          <h2 class="podium-text">Podium</h2>
+        </div>
+
+        <div class="auth-box">
+          {{#if currentUser}}
+            {{#with currentUser}}
+              <h1 class="username">{{username}}</h1>
+            {{/with}}
+            <button id="logout" class="btn btn-primary btn-block">Abmelden</button>
+            <button id="reset" class="btn btn-danger btn-block">Zurücksetzen</button>
+          {{else}}
+            <form id="loginform" role="form">
+              <div class="form-group">
+                <input type="text" class="form-control" id="username" placeholder="Benutzername">
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" id="password" placeholder="Passwort">
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Anmelden</button>
+            </form>
+          {{/if}}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</template>

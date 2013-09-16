@@ -1,0 +1,169 @@
+/* === GENERAL === */
+#home ::-moz-selection { background: none; }
+#home ::selection      { background: none; }
+
+body {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+}
+
+html,
+body,
+.wrapper {
+  height: 100%;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+/* === MULTI-LIST === */
+.multi-list {
+  list-style: none;
+  margin-left: 0;
+}
+
+/*.multi-list:before,
+.multi-list:after {
+  content: "";
+  display: table;
+}
+
+.multi-list:after { clear: both; }*/
+
+.multi-list > li {
+  float: left;
+}
+
+.two-cols > li { width: 50%; }
+.three-cols > li { width: 33.333%; }
+.four-cols > li { width: 25%; }
+.five-cols > li { width: 20%; }
+
+/* === TIMETABLE === */
+#timetable {
+  height: 100%;
+}
+
+#timetable > li {
+  display: table;
+  height: 50%;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+#timetable .time {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 80px;
+  font-size: 7vw;
+  text-rendering: optimizeLegibility;
+  cursor: default;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+
+#timetable .is-speaking .time:before {
+  content: "Spricht";
+  position: absolute;
+  top: 5%;
+  left: 0;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  pointer-events: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, .5);
+  font-weight: 400;
+}
+
+/* === OVERALL TIME === */
+#overalltime {
+  height: 15%;
+}
+
+/* === HOME === */
+#overalltime,
+#timetable { width: 100%; }
+
+/* === AUTH === */
+#auth { background: #1abc9c; }
+
+.podium {
+  margin: 0 auto 20px;
+  width: 280px;
+}
+
+.podium-logo {
+  width: 100px;
+  height: 100px;
+}
+
+.podium-text {
+  display: inline-block;
+  margin: 0;
+  line-height: 100px;
+  vertical-align: middle;
+  color: #213448;
+  font-size: 48px;
+  letter-spacing: -1px;
+  margin-left: 12px;
+}
+
+#auth-wrapper {
+  margin-top: 40px;
+}
+
+.auth-box {
+  padding: 24px 24px 20px;
+  background: #edeff1;
+  border-radius: 6px;
+}
+
+.auth-box .username {
+  margin: 0 0 10px;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 26px;
+  color: #34495e;
+  text-align: center;
+}
+
+.auth-box .btn {
+  font-size: 17px;
+  line-height: 20px;
+  padding: 12px 18px 13px;
+  border: none;
+  outline: none;
+  -webkit-transition: 0.25s;
+  -moz-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.auth-box .btn-primary { background: #1abc9c; }
+.auth-box .btn-primary:hover,
+.auth-box .btn-primary:focus { background: #48c9b0; }
+
+.auth-box .btn-danger { background: #e74c3c; }
+.auth-box .btn-danger:hover,
+.auth-box .btn-danger:focus { background: #ec7063; }
+
+#loginform .form-control {
+  border: 2px solid transparent;
+  font-size: 17px;
+  padding: 12px 10px;
+  color: #34495e;
+  height: auto;
+  line-height: 1;
+  box-shadow: none;
+}
+
+#loginform .form-control:focus { border-color: #1abc9c; }
+
+#loginform .form-control::-webkit-input-placeholder { color: #b2bcc5; }
+#loginform .form-control::-moz-placeholder { color: #b2bcc5; }
